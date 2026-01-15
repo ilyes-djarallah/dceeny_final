@@ -1,0 +1,26 @@
+{
+    "en": {
+        "projects": "PROJECTS",
+        "about_us": "ABOUT US",
+        "services": "SERVICES",
+        "contacts": "CONTACTS",
+        "private_projects": "PRIVATE PROJECTS",
+        "public_projects": "PUBLIC PROJECTS"
+    },
+    "fr": {
+        "projects": "PROJETS",
+        "about_us": "À PROPOS",
+        "services": "SERVICES",
+        "contacts": "CONTACTS",
+        "private_projects": "PROJETS PRIVÉS",
+        "public_projects": "PROJETS PUBLICS"
+    },
+    "ar": {
+        "projects": "المشاريع",
+        "about_us": "معلومات عنا",
+        "services": "الخدمات",
+        "contacts": "جهات الاتصال",
+        "private_projects": "المشاريع الخاصة",
+        "public_projects": "المشاريع العامة"
+    }
+}

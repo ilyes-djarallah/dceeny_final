@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2562.308 884.893">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.039em;
+      }
+
+      .cls-2 {
+        font-family: Montserrat-Bold, Montserrat;
+        font-size: 382px;
+        font-variation-settings: 'wght' 700;
+        font-weight: 700;
+      }
+
+      .cls-3 {
+        letter-spacing: -.057em;
+      }
+
+      .cls-4 {
+        font-family: Montserrat-Medium, Montserrat;
+        font-size: 154px;
+        font-variation-settings: 'wght' 500;
+        font-weight: 500;
+      }
+
+      .cls-5 {
+        letter-spacing: -.039em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.046em;
+      }
+
+      .cls-7 {
+        letter-spacing: -.026em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.037em;
+      }
+    </style>
+  </defs>
+  <g>
+    <rect x="0" y="49.313" width="239.425" height="378.481"/>
+    <rect x="279.608" y="49.313" width="239.425" height="378.481"/>
+    <rect x="559.216" y="49.313" width="239.425" height="169.233"/>
+    <rect x="559.216" y="258.561" width="239.425" height="169.233"/>
+    <rect y="467.81" width="239.425" height="169.233"/>
+    <rect x="0" y="677.058" width="239.425" height="169.233"/>
+    <polygon points="318.954 467.827 519.032 467.827 519.032 803.775 318.954 467.827"/>
+    <polygon points="279.608 508.659 279.608 846.291 478.849 846.291 279.608 508.659"/>
+    <polygon points="599.399 467.81 758.457 467.81 678.928 586.19 599.399 467.81"/>
+    <polygon points="559.216 508.659 559.216 846.291 658.836 846.291 658.836 654.911 559.216 508.659"/>
+    <polygon points="798.642 508.659 798.642 846.291 699.022 846.291 699.022 654.911 798.642 508.659"/>
+  </g>
+  <text class="cls-2" transform="translate(931.563 380.074)"><tspan class="cls-7" x="0" y="0">DCEE</tspan><tspan class="cls-8" x="1065.004" y="0">N</tspan><tspan class="cls-7" x="1359.529" y="0">Y</tspan></text>
+  <text class="cls-4" transform="translate(960.83 620.695)"><tspan class="cls-1" x="0" y="0">In</tspan><tspan class="cls-3" x="140.602" y="0">t</tspan><tspan class="cls-5" x="195.579" y="0">e</tspan><tspan class="cls-6" x="283.82" y="0">r</tspan><tspan class="cls-1" x="339.877" y="0">ior Design Studio</tspan></text>
+</svg>
