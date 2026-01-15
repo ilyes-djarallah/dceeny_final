@@ -24,22 +24,41 @@
     }
   }
 
+  // async function fetchText(url) {
+  //   const res = await fetch(url, { cache: "force-cache" });
+  //   if (!res.ok) throw new Error(`Failed to load ${url}: ${res.status}`);
+  //   return await res.text();
+  // }
+
+  // async function injectPartial(targetSelector, url) {
+  //   const target = qs(targetSelector);
+  //   if (!target) return;
+
+  //   const cacheKey = `partial:${url}`;
+
+  //   try {
+  //     const cached = sessionStorage.getItem(cacheKey);
+  //     const html = cached || (await fetchText(url));
+  //     if (!cached) sessionStorage.setItem(cacheKey, html);
+  //     target.innerHTML = html;
+  //   } catch (err) {
+  //     console.warn(err);
+  //   }
+  // }
   async function fetchText(url) {
-    const res = await fetch(url, { cache: "force-cache" });
+    const res = await fetch(url, {
+      cache: "no-store", // 🔴 disables browser cache
+    });
     if (!res.ok) throw new Error(`Failed to load ${url}: ${res.status}`);
     return await res.text();
   }
 
   async function injectPartial(targetSelector, url) {
-    const target = qs(targetSelector);
+    const target = document.querySelector(targetSelector);
     if (!target) return;
 
-    const cacheKey = `partial:${url}`;
-
     try {
-      const cached = sessionStorage.getItem(cacheKey);
-      const html = cached || (await fetchText(url));
-      if (!cached) sessionStorage.setItem(cacheKey, html);
+      const html = await fetchText(url);
       target.innerHTML = html;
     } catch (err) {
       console.warn(err);
@@ -67,8 +86,11 @@
         if (typeof window.switchLanguage === "function") {
           window.switchLanguage(lang);
         } else {
-          try { localStorage.setItem(STORAGE_LANG_KEY, lang); } catch {}
-          if (typeof window.applyTranslations === "function") window.applyTranslations(lang);
+          try {
+            localStorage.setItem(STORAGE_LANG_KEY, lang);
+          } catch {}
+          if (typeof window.applyTranslations === "function")
+            window.applyTranslations(lang);
         }
       });
     });
@@ -79,12 +101,19 @@
     const lightFooterTarget = "#footer";
     const darkFooterTarget = "#darkFooter";
 
-    const headerUrl = isEducationPath() ? "/elements/headerDark.html" : "/elements/header.html";
-    const footerUrl = isEducationPath() ? "/elements/footerDark.html" : "/elements/footer.html";
+    const headerUrl = isEducationPath()
+      ? "/elements/headerDark.html"
+      : "/elements/header.html";
+    const footerUrl = isEducationPath()
+      ? "/elements/footerDark.html"
+      : "../elements/footer.html";
 
     await Promise.all([
       injectPartial(headerTarget, headerUrl),
-      injectPartial(isEducationPath() ? darkFooterTarget : lightFooterTarget, footerUrl),
+      injectPartial(
+        isEducationPath() ? darkFooterTarget : lightFooterTarget,
+        footerUrl
+      ),
     ]);
 
     bindLanguageLinks();
