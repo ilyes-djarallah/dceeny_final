@@ -13,6 +13,7 @@
     initNavbarDropdowns();
     initSmoothScroll();
     initSlideshow();
+    initOrderOverlay();
     initProfessionalForm();
     initBuyOverlay(); // (education pages) optional
     initCourseSearch(); // (education listing) optional
@@ -27,13 +28,29 @@
     const loader = document.getElementById("loading-screen");
     if (!loader) return;
 
-    // Hide after full load to avoid flashing unstyled content.
-    window.addEventListener("load", () => {
+    const HIDE_AFTER_MS = 3000; // fail-safe
+    const FADE_MS = 250;
+    let hidden = false;
+
+    const hide = () => {
+      if (hidden) return;
+      hidden = true;
+
       loader.style.opacity = "0";
-      setTimeout(() => {
+      window.setTimeout(() => {
         loader.style.display = "none";
-      }, 250);
-    });
+        document.body.classList.remove("is-loading");
+      }, FADE_MS);
+    };
+
+    // Hide as soon as DOM is usable
+    document.addEventListener("DOMContentLoaded", hide, { once: true });
+
+    // Also hide on full load (images/fonts)
+    window.addEventListener("load", hide, { once: true });
+
+    // Never get stuck
+    window.setTimeout(hide, HIDE_AFTER_MS);
   }
 
   /* ==========================================================
@@ -158,7 +175,7 @@
     }, 100);
   }
 
-/* ==========================================================
+  /* ==========================================================
      4) Scroll down button (homepage)
      - Supports inline onclick="scrollDown()" used in your homepage markup
   ========================================================== */
@@ -382,6 +399,53 @@
       if (!el) return;
       el.addEventListener("input", () => showError(el, false));
       el.addEventListener("change", () => showError(el, false));
+    });
+  }
+
+  /* ==========================================================
+     6.5) Order overlay (projects)
+     - expects elements (if present):
+       #projects (open button), #orderOverlay (overlay), #closeOverlay (close button)
+       Optional: close on outside click + Escape
+  ========================================================== */
+  function initOrderOverlay() {
+    const openBtn = document.getElementById("projects");
+    const overlay = document.getElementById("orderOverlay");
+    if (!openBtn || !overlay) return;
+
+    const closeBtn = document.getElementById("closeOverlay");
+
+    const open = () => {
+      overlay.classList.add("open");
+      overlay.setAttribute("aria-hidden", "false");
+      document.body.classList.add("no-scroll");
+    };
+
+    const close = () => {
+      overlay.classList.remove("open");
+      overlay.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("no-scroll");
+    };
+
+    openBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      open();
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        close();
+      });
+    }
+
+    overlay.addEventListener("click", (e) => {
+      // Clicking the dimmed background closes; clicks inside form-wrapper do not
+      if (e.target === overlay) close();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") close();
     });
   }
 

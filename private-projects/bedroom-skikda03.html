@@ -10,7 +10,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css" />
   <!-- Fancybox CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 
@@ -32,23 +32,10 @@
 
   <!-- Optional: Web App Manifest (for Android) -->
   <link rel="manifest" href="/site.webmanifest">
+  <script src="/script.js"></script>
+  <script src="/layout.js"></script>
 
 </head>
-<script>
-  $(document).ready(function () {
-    $("#header-container").load("elements/header.html", function () {
-      const savedLanguage = localStorage.getItem("preferredLanguage") || "en";
-      applyTranslations(savedLanguage); // Call translation function after loading
-    });
-  });
-</script>
-<script>
-  $(function () {
-    $("#footer").load("elements/footer.html", function () {
-      applyTranslations(localStorage.getItem("preferredLanguage") || "en");
-    });
-  });
-</script>
 
 <body>
   <!-- <div id="loading-screen">
@@ -71,42 +58,42 @@
     <h1 data-translate="privateSkikda"></h1>
     <p data-translate="skikdaInfo"></p>
   </div>
-  <div class="gallery-shit">  
+  <div class="gallery-shit">
     <div class="gallery-row-shit">
-      <a href="assets/images/projects/private/Draria/cam 001.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Draria/cam 001.webp" alt="Image 1" />
+      <a href="/assets/images/projects/private/Draria/cam 001.webp" data-fancybox="gallery">
+        <img src="/assets/images/projects/private/Draria/cam 001.webp" alt="Image 1" />
       </a>
-      <a href="assets/images/projects/private/Draria/cam 002.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Draria/cam 002.webp" alt="Image 2" />
+      <a href="/assets/images/projects/private/Draria/cam 002.webp" data-fancybox="gallery">
+        <img src="/assets/images/projects/private/Draria/cam 002.webp" alt="Image 2" />
       </a>
     </div>
     <div class="gallery-row-shit">
-      <a href="assets/images/projects/private/Draria/cam 003.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Draria/cam 003.webp" alt="Image 1" />
+      <a href="/assets/images/projects/private/Draria/cam 003.webp" data-fancybox="gallery">
+        <img src="/assets/images/projects/private/Draria/cam 003.webp" alt="Image 1" />
       </a>
-      <a href="assets/images/projects/private/Draria/cam 004.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Draria/cam 004.webp" alt="Image 2" />
-      </a>
-    </div>
-    <div class="gallery-row-shit">
-      <a href="assets/images/projects/private/Draria/cam 005.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Draria/cam 005.webp" alt="Image 1" />
-      </a>
-      <a href="assets/images/projects/private/Draria/cam 006.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Draria/cam 006.webp" alt="Image 2" />
+      <a href="/assets/images/projects/private/Draria/cam 004.webp" data-fancybox="gallery">
+        <img src="/assets/images/projects/private/Draria/cam 004.webp" alt="Image 2" />
       </a>
     </div>
     <div class="gallery-row-shit">
-      <a href="assets/images/projects/private/Draria/cam 007.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Draria/cam 007.webp" alt="Image 1" />
+      <a href="/assets/images/projects/private/Draria/cam 005.webp" data-fancybox="gallery">
+        <img src="/assets/images/projects/private/Draria/cam 005.webp" alt="Image 1" />
       </a>
-      <a href="assets/images/projects/private/Draria/cam 008.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Draria/cam 008.webp" alt="Image 1" />
+      <a href="/assets/images/projects/private/Draria/cam 006.webp" data-fancybox="gallery">
+        <img src="/assets/images/projects/private/Draria/cam 006.webp" alt="Image 2" />
       </a>
     </div>
     <div class="gallery-row-shit">
-      <a href="assets/images/projects/private/Draria/cam 009.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Draria/cam 009.webp" alt="Image 1" />
+      <a href="/assets/images/projects/private/Draria/cam 007.webp" data-fancybox="gallery">
+        <img src="/assets/images/projects/private/Draria/cam 007.webp" alt="Image 1" />
+      </a>
+      <a href="/assets/images/projects/private/Draria/cam 008.webp" data-fancybox="gallery">
+        <img src="/assets/images/projects/private/Draria/cam 008.webp" alt="Image 1" />
+      </a>
+    </div>
+    <div class="gallery-row-shit">
+      <a href="/assets/images/projects/private/Draria/cam 009.webp" data-fancybox="gallery">
+        <img src="/assets/images/projects/private/Draria/cam 009.webp" alt="Image 1" />
       </a>
     </div>
 
@@ -172,7 +159,7 @@
     </div>
   </div>
   <footer id="footer"></footer>
-  <script src="script.js"></script>
+
   <script>
     Fancybox.bind('[data-fancybox="gallery"]', {
       Thumbs: false, // Disable thumbnails

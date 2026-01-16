@@ -22,6 +22,10 @@
 
   const translations = {
     en: {
+      meta_bedroom_batna13_title:
+        "Private Apartment Bedroom — Batna | Dceeny Interior Design Studio",
+      meta_bedroom_batna13_desc:
+        "Minimalist bedroom interior design concept in Batna, Algeria. 3D visualization rendered in 3ds Max with Corona style workflow.",
       meta_home_title: "Dceeny | Interior Design Studio",
       meta_home_desc:
         "Dceeny is an interior design studio. Explore our projects, services, and design concepts.",
@@ -1506,6 +1510,10 @@
     },
 
     fr: {
+      meta_bedroom_batna13_title:
+        "Chambre a Coucher privé — Batna | Dceeny Studio de design d’intérieur",
+      meta_bedroom_batna13_desc:
+        "Concept de chambre minimaliste à Batna, Algérie. Visualisation 3D réalisée avec 3ds Max & Corona.",
       meta_home_title: "Dceeny | Studio de design d’intérieur",
       meta_home_desc:
         "Dceeny est un studio de design d’intérieur. Découvrez nos projets, services et concepts de design.",
@@ -3082,6 +3090,10 @@
     },
 
     ar: {
+            meta_bedroom_batna13_title:
+        "غرفة نوم شقة خاصة — باتنة | دسيني استوديو التصميم الداخلي",
+      meta_bedroom_batna13_desc:
+        "تصميم غرفة نوم بأسلوب مينيمال في باتنة، الجزائر. تصور ثلاثي الأبعاد باستخدام 3ds Max ضمن سير عمل Corona.",
       meta_home_title: "دسيني | استوديو التصميم الداخلي",
       meta_home_desc:
         "دسيني هو استوديو تصميم داخلي. اكتشف مشاريعنا وخدماتنا وأفكار التصميم.",
