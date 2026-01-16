@@ -58,100 +58,107 @@
 
   /* ==========================================================
      3) Navbar dropdowns (Projects + Language)
-     - Mobile: Projects dropdown should be always visible via CSS (your preference)
-     - Desktop: toggle on click, close on outside click / Esc
+     - Works with injected header
+     - No duplicated handlers (bind-once guard)
+     - Closes on outside click + Escape
   ========================================================== */
-  // function initNavbarDropdowns() {
-  //   const projectsBtn = document.getElementById("projects-btn");
-  //   const projectsDropdown = document.getElementById("projects-dropdown");
+  function initNavbarDropdowns() {
+    const OPEN_CLASS = "show-dropdown";
+    const BOUND_FLAG = "navDropdownsBound";
 
-  //   const lgeBtn = document.getElementById("lge-btn");
-  //   const lgeMenu = document.querySelector(".dropdown-lge-menu");
+    const bind = () => {
+      const projectsBtn = document.getElementById("projects-btn");
+      const projectsMenu = document.getElementById("projects-dropdown");
 
-  //   if (!projectsBtn && !lgeBtn) return;
+      const lgeBtn = document.getElementById("lge-btn");
+      const lgeMenu = document.getElementById("language-menu");
 
-  //   /* ===============================
-  //    PROJECTS DROPDOWN
-  // =============================== */
-  //   if (projectsBtn && projectsDropdown) {
-  //     projectsBtn.setAttribute("aria-haspopup", "true");
-  //     projectsBtn.setAttribute("aria-expanded", "false");
+      // If header isn't present yet, binding cannot occur
+      if (!projectsBtn && !lgeBtn) return false;
 
-  //     projectsBtn.addEventListener("click", (e) => {
-  //       e.preventDefault();
-  //       const isOpen = projectsDropdown.classList.contains("show-dropdown");
+      // Prevent double-binding across re-inits
+      if (document.documentElement.dataset[BOUND_FLAG] === "1") return true;
+      document.documentElement.dataset[BOUND_FLAG] = "1";
 
-  //       closeAllDropdowns();
+      const closeAll = () => {
+        projectsMenu?.classList.remove(OPEN_CLASS);
+        lgeMenu?.classList.remove(OPEN_CLASS);
 
-  //       if (!isOpen) {
-  //         projectsDropdown.classList.add("show-dropdown");
-  //         projectsBtn.setAttribute("aria-expanded", "true");
-  //       }
-  //     });
-  //   }
+        projectsBtn?.setAttribute("aria-expanded", "false");
+        lgeBtn?.setAttribute("aria-expanded", "false");
+      };
 
-  //   /* ===============================
-  //    LANGUAGE DROPDOWN
-  // =============================== */
-  //   if (lgeBtn && lgeMenu) {
-  //     lgeBtn.setAttribute("aria-haspopup", "true");
-  //     lgeBtn.setAttribute("aria-expanded", "false");
+      const toggle = (btn, menu) => {
+        if (!btn || !menu) return;
+        const wasOpen = menu.classList.contains(OPEN_CLASS);
+        closeAll();
+        if (!wasOpen) {
+          menu.classList.add(OPEN_CLASS);
+          btn.setAttribute("aria-expanded", "true");
+        }
+      };
 
-  //     lgeBtn.addEventListener("click", (e) => {
-  //       e.preventDefault();
-  //       const isOpen = lgeMenu.classList.contains("show-dropdown");
+      // A11y attributes (safe even if already present)
+      if (projectsBtn) {
+        projectsBtn.setAttribute("aria-haspopup", "true");
+        projectsBtn.setAttribute("aria-expanded", "false");
+      }
+      if (lgeBtn) {
+        lgeBtn.setAttribute("aria-haspopup", "true");
+        lgeBtn.setAttribute("aria-expanded", "false");
+      }
 
-  //       closeAllDropdowns();
+      // Toggle handlers
+      projectsBtn?.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        toggle(projectsBtn, projectsMenu);
+      });
 
-  //       if (!isOpen) {
-  //         lgeMenu.classList.add("show-dropdown");
-  //         lgeBtn.setAttribute("aria-expanded", "true");
-  //       }
-  //     });
+      lgeBtn?.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        toggle(lgeBtn, lgeMenu);
+      });
 
-  //     lgeMenu.addEventListener("click", (e) => {
-  //       const link = e.target.closest("[data-lang]");
-  //       if (!link) return;
+      // Close on outside click
+      document.addEventListener("click", (e) => {
+        const t = e.target;
 
-  //       e.preventDefault();
-  //       const lang = link.getAttribute("data-lang");
+        if (
+          projectsBtn?.contains(t) ||
+          projectsMenu?.contains(t) ||
+          lgeBtn?.contains(t) ||
+          lgeMenu?.contains(t)
+        ) {
+          return;
+        }
+        closeAll();
+      });
 
-  //       if (typeof window.switchLanguage === "function") {
-  //         window.switchLanguage(lang);
-  //       }
+      // Close on Escape
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeAll();
+      });
 
-  //       closeAllDropdowns();
-  //     });
-  //   }
+      return true;
+    };
 
-  //   /* ===============================
-  //    CLOSE HANDLERS
-  // =============================== */
-  //   document.addEventListener("click", (e) => {
-  //     if (
-  //       projectsBtn?.contains(e.target) ||
-  //       projectsDropdown?.contains(e.target) ||
-  //       lgeBtn?.contains(e.target) ||
-  //       lgeMenu?.contains(e.target)
-  //     ) {
-  //       return;
-  //     }
-  //     closeAllDropdowns();
-  //   });
+    // Bind immediately if possible
+    if (bind()) return;
 
-  //   document.addEventListener("keydown", (e) => {
-  //     if (e.key === "Escape") closeAllDropdowns();
-  //   });
+    // Bind right after layout injection
+    window.addEventListener("dceeny:layout-ready", bind, { once: true });
 
-  //   function closeAllDropdowns() {
-  //     projectsDropdown?.classList.remove("show-dropdown");
-  //     lgeMenu?.classList.remove("show-dropdown");
-  //     projectsBtn?.setAttribute("aria-expanded", "false");
-  //     lgeBtn?.setAttribute("aria-expanded", "false");
-  //   }
-  // }
+    // Safety fallback (if event missed due to script ordering)
+    let tries = 0;
+    const timer = window.setInterval(() => {
+      tries += 1;
+      if (bind() || tries >= 25) window.clearInterval(timer);
+    }, 100);
+  }
 
-  /* ==========================================================
+/* ==========================================================
      4) Scroll down button (homepage)
      - Supports inline onclick="scrollDown()" used in your homepage markup
   ========================================================== */
