@@ -61,141 +61,95 @@
      - Mobile: Projects dropdown should be always visible via CSS (your preference)
      - Desktop: toggle on click, close on outside click / Esc
   ========================================================== */
-  function initNavbarDropdowns() {
-    const projectsBtn = document.getElementById("projects-btn");
-    const projectsDropdown = document.getElementById("projects-dropdown");
+  // function initNavbarDropdowns() {
+  //   const projectsBtn = document.getElementById("projects-btn");
+  //   const projectsDropdown = document.getElementById("projects-dropdown");
 
-    const lgeBtn = document.getElementById("lge-btn");
-    const lgeMenu = document.querySelector(".dropdown-lge-menu");
+  //   const lgeBtn = document.getElementById("lge-btn");
+  //   const lgeMenu = document.querySelector(".dropdown-lge-menu");
 
-    if (!projectsBtn && !lgeBtn) return;
+  //   if (!projectsBtn && !lgeBtn) return;
 
-    /* ===============================
-     PROJECTS DROPDOWN
-  =============================== */
-    if (projectsBtn && projectsDropdown) {
-      projectsBtn.setAttribute("aria-haspopup", "true");
-      projectsBtn.setAttribute("aria-expanded", "false");
+  //   /* ===============================
+  //    PROJECTS DROPDOWN
+  // =============================== */
+  //   if (projectsBtn && projectsDropdown) {
+  //     projectsBtn.setAttribute("aria-haspopup", "true");
+  //     projectsBtn.setAttribute("aria-expanded", "false");
 
-      projectsBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        const isOpen = projectsDropdown.classList.contains("show-dropdown");
+  //     projectsBtn.addEventListener("click", (e) => {
+  //       e.preventDefault();
+  //       const isOpen = projectsDropdown.classList.contains("show-dropdown");
 
-        closeAllDropdowns();
+  //       closeAllDropdowns();
 
-        if (!isOpen) {
-          projectsDropdown.classList.add("show-dropdown");
-          projectsBtn.setAttribute("aria-expanded", "true");
-        }
-      });
-    }
+  //       if (!isOpen) {
+  //         projectsDropdown.classList.add("show-dropdown");
+  //         projectsBtn.setAttribute("aria-expanded", "true");
+  //       }
+  //     });
+  //   }
 
-    /* ===============================
-     LANGUAGE DROPDOWN
-  =============================== */
-    if (lgeBtn && lgeMenu) {
-      lgeBtn.setAttribute("aria-haspopup", "true");
-      lgeBtn.setAttribute("aria-expanded", "false");
+  //   /* ===============================
+  //    LANGUAGE DROPDOWN
+  // =============================== */
+  //   if (lgeBtn && lgeMenu) {
+  //     lgeBtn.setAttribute("aria-haspopup", "true");
+  //     lgeBtn.setAttribute("aria-expanded", "false");
 
-      lgeBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        const isOpen = lgeMenu.classList.contains("show-dropdown");
+  //     lgeBtn.addEventListener("click", (e) => {
+  //       e.preventDefault();
+  //       const isOpen = lgeMenu.classList.contains("show-dropdown");
 
-        closeAllDropdowns();
+  //       closeAllDropdowns();
 
-        if (!isOpen) {
-          lgeMenu.classList.add("show-dropdown");
-          lgeBtn.setAttribute("aria-expanded", "true");
-        }
-      });
+  //       if (!isOpen) {
+  //         lgeMenu.classList.add("show-dropdown");
+  //         lgeBtn.setAttribute("aria-expanded", "true");
+  //       }
+  //     });
 
-      lgeMenu.addEventListener("click", (e) => {
-        const link = e.target.closest("[data-lang]");
-        if (!link) return;
+  //     lgeMenu.addEventListener("click", (e) => {
+  //       const link = e.target.closest("[data-lang]");
+  //       if (!link) return;
 
-        e.preventDefault();
-        const lang = link.getAttribute("data-lang");
+  //       e.preventDefault();
+  //       const lang = link.getAttribute("data-lang");
 
-        if (typeof window.switchLanguage === "function") {
-          window.switchLanguage(lang);
-        }
+  //       if (typeof window.switchLanguage === "function") {
+  //         window.switchLanguage(lang);
+  //       }
 
-        closeAllDropdowns();
-      });
-    }
+  //       closeAllDropdowns();
+  //     });
+  //   }
 
-    /* ===============================
-     CLOSE HANDLERS
-  =============================== */
-    document.addEventListener("click", (e) => {
-      if (
-        projectsBtn?.contains(e.target) ||
-        projectsDropdown?.contains(e.target) ||
-        lgeBtn?.contains(e.target) ||
-        lgeMenu?.contains(e.target)
-      ) {
-        return;
-      }
-      closeAllDropdowns();
-    });
+  //   /* ===============================
+  //    CLOSE HANDLERS
+  // =============================== */
+  //   document.addEventListener("click", (e) => {
+  //     if (
+  //       projectsBtn?.contains(e.target) ||
+  //       projectsDropdown?.contains(e.target) ||
+  //       lgeBtn?.contains(e.target) ||
+  //       lgeMenu?.contains(e.target)
+  //     ) {
+  //       return;
+  //     }
+  //     closeAllDropdowns();
+  //   });
 
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeAllDropdowns();
-    });
+  //   document.addEventListener("keydown", (e) => {
+  //     if (e.key === "Escape") closeAllDropdowns();
+  //   });
 
-    function closeAllDropdowns() {
-      projectsDropdown?.classList.remove("show-dropdown");
-      lgeMenu?.classList.remove("show-dropdown");
-      projectsBtn?.setAttribute("aria-expanded", "false");
-      lgeBtn?.setAttribute("aria-expanded", "false");
-    }
-  }
-
-  function makeDropdown({ trigger, menu, enabled, openClass }) {
-    const isEnabled = () => (typeof enabled === "function" ? enabled() : true);
-
-    const close = () => {
-      trigger.setAttribute("aria-expanded", "false");
-      menu.classList.remove(openClass);
-    };
-
-    const open = () => {
-      trigger.setAttribute("aria-expanded", "true");
-      menu.classList.add(openClass);
-    };
-
-    const toggle = () => {
-      if (!isEnabled()) return; // mobile uses always-visible menu
-      const expanded = trigger.getAttribute("aria-expanded") === "true";
-      expanded ? close() : open();
-    };
-
-    // a11y
-    trigger.setAttribute("aria-haspopup", "true");
-    trigger.setAttribute("aria-expanded", "false");
-
-    trigger.addEventListener("click", (e) => {
-      e.preventDefault();
-      toggle();
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!isEnabled()) return;
-      if (e.target === trigger || trigger.contains(e.target)) return;
-      if (menu.contains(e.target)) return;
-      close();
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (!isEnabled()) return;
-      if (e.key === "Escape") close();
-    });
-
-    // Close when switching between desktop/mobile sizes
-    window.addEventListener("resize", () => {
-      if (!isEnabled()) close();
-    });
-  }
+  //   function closeAllDropdowns() {
+  //     projectsDropdown?.classList.remove("show-dropdown");
+  //     lgeMenu?.classList.remove("show-dropdown");
+  //     projectsBtn?.setAttribute("aria-expanded", "false");
+  //     lgeBtn?.setAttribute("aria-expanded", "false");
+  //   }
+  // }
 
   /* ==========================================================
      4) Scroll down button (homepage)
