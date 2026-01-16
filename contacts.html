@@ -2,48 +2,64 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-translate="contacts"></title>
-
-  <!-- External Libraries -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Translation Script -->
-  <script src="scripts/translations.js"></script>
-  <!-- <link rel="icon" href="assets/images/favicon.png" /> -->
-  <!-- Main ICO Favicon (for Google & legacy browsers) -->
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-  <!-- Modern PNG Favicons (32x32 & 16x16) -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
-
-  <!-- Apple Touch Icon (for Safari/iOS) -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
-
-  <!-- Optional: Web App Manifest (for Android) -->
-  <link rel="manifest" href="/site.webmanifest">
-
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title data-translate="meta_contacts_title">Dceeny</title>
+  <meta content="Dceeny — interior design studio and academy." data-translate="meta_contacts_desc" name="description" />
+  <link href="https://dceeny.com/contacts" rel="canonical" />
+  <meta content="index,follow" name="robots" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="light" name="color-scheme" />
+  <meta content="website" property="og:type" />
+  <meta content="Dceeny" property="og:site_name" />
+  <meta content="Dceeny" data-translate="meta_contacts_title" property="og:title" />
+  <meta content="Dceeny — interior design studio and academy." data-translate="meta_contacts_desc"
+    property="og:description" />
+  <meta content="https://dceeny.com/contacts" property="og:url" />
+  <meta content="https://dceeny.com/assets/images/og-cover.jpg" property="og:image" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="Dceeny" data-translate="meta_contacts_title" name="twitter:title" />
+  <meta content="Dceeny — interior design studio and academy." data-translate="meta_contacts_desc"
+    name="twitter:description" />
+  <meta content="https://dceeny.com/assets/images/og-cover.jpg" name="twitter:image" />
+  <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+  <link href="/assets/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+  <link href="/assets/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+  <link href="/assets/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="/site.webmanifest" rel="manifest" />
+  <link href="https://dceeny.com/" hreflang="en" rel="alternate" />
+  <link href="https://dceeny.com/?lang=fr" hreflang="fr" rel="alternate" />
+  <link href="https://dceeny.com/?lang=ar" hreflang="ar" rel="alternate" />
+  <link href="https://dceeny.com/" hreflang="x-default" rel="alternate" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap"
+    onload="this.onload=null;this.rel='stylesheet'" rel="preload" /><noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet" />
+  </noscript>
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700&amp;display=swap"
+    onload="this.onload=null;this.rel='stylesheet'" rel="preload" /><noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet" />
+  </noscript>
+  <link as="style" href="/style.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload" /><noscript>
+    <link href="/style.css" rel="stylesheet" />
+  </noscript>
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Dceeny",
+  "url": "https://dceeny.com/",
+  "image": "https://dceeny.com/assets/images/logo.png",
+  "telephone": ["+213550949139","+213770949139"],
+  "address": { "@type": "PostalAddress", "addressCountry": "DZ" }
+}</script>
+  <script defer="" src="/scripts/translations.js"></script>
+  <script defer="" src="/layout.js"></script>
+  <script defer="" src="/script.js"></script>
 </head>
-<script>
-  $(document).ready(function () {
-    $("#header-container").load("elements/header.html", function () {
-      const savedLanguage = localStorage.getItem("preferredLanguage") || "en";
-      applyTranslations(savedLanguage); // Call translation function after loading
-    });
-  });
-</script>
-<script>
-  $(function () {
-    $("#footer").load("elements/footer.html", function () {
-      applyTranslations(localStorage.getItem("preferredLanguage") || "en");
-    });
-  });
-</script>
 
 <body>
   <!-- <div id="loading-screen">
@@ -51,14 +67,14 @@
     <p>Loading, please wait...</p>
   </div> -->
   <!-- Scroll-to-top Button -->
-  <button id="scrollToTop" class="scroll-to-top">
-    <svg role="presentation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-      y="0px" width="50px" height="50px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-      <path style="fill:#000000;" d="M47.875,24c0,13.186-10.689,23.875-23.875,23.875S0.125,37.186,0.125,24S10.814,0.125,24,0.125
+  <button class="scroll-to-top" id="scrollToTop">
+    <svg enable-background="new 0 0 48 48" height="50px" role="presentation" viewbox="0 0 48 48" width="50px" x="0px"
+      xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+      <path d="M47.875,24c0,13.186-10.689,23.875-23.875,23.875S0.125,37.186,0.125,24S10.814,0.125,24,0.125
         S47.875,10.814,47.875,24z M25.503,16.881l6.994,7.049c0.583,0.588,1.532,0.592,2.121,0.008c0.588-0.583,0.592-1.533,0.008-2.122
         l-9.562-9.637c-0.281-0.283-0.664-0.443-1.063-0.443c0,0,0,0-0.001,0c-0.399,0-0.782,0.159-1.063,0.442l-9.591,9.637
         c-0.584,0.587-0.583,1.537,0.005,2.121c0.292,0.292,0.675,0.437,1.058,0.437c0.385,0,0.77-0.147,1.063-0.442L22.5,16.87v19.163
-        c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5L25.503,16.881z"></path>
+        c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5L25.503,16.881z" style="fill:#000000;"></path>
     </svg>
   </button>
   <header id="header-container"></header>
@@ -78,41 +94,41 @@
     </div>
   </div>
   <div class="social-media-iconas">
-    <a href="https://www.facebook.com/dceeny" target="_blank" class="icon-linkas">
-      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd"
+    <a class="icon-linkas" href="https://www.facebook.com/dceeny" target="_blank">
+      <svg fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path clip-rule="evenodd"
           d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM53.5357 23.0167C50.6527 23.0971 47.6106 23.7911 45.4617 25.8328C43.687 27.4744 42.7929 29.8636 42.592 32.2519C42.5308 33.9602 42.5395 35.6729 42.5483 37.3849C42.5548 38.6688 42.5614 39.9524 42.5384 41.2334C41.7492 41.2392 40.9575 41.2375 40.1655 41.2359C39.1093 41.2337 38.0525 41.2315 37 41.2468C37 42.2691 37.0015 43.2928 37.003 44.3174C37.006 46.3696 37.0089 48.4256 37 50.482C38.0525 50.4973 39.1093 50.4951 40.1655 50.4929C40.9575 50.4913 41.7492 50.4897 42.5384 50.4954C42.5563 54.5705 42.553 58.6454 42.5497 62.7203C42.5455 67.8139 42.5414 72.9074 42.5786 78.0008C44.7444 77.9855 46.9056 77.9877 49.0675 77.9899C50.6892 77.9916 52.3112 77.9932 53.9359 77.9874C53.9493 73.403 53.9459 68.8222 53.9426 64.2414C53.9392 59.6605 53.9359 55.0796 53.9493 50.4954C55.0417 50.4897 56.1342 50.4913 57.2266 50.4929C58.6832 50.4951 60.1398 50.4973 61.5964 50.482C62.0502 47.4123 62.4369 44.3157 62.6504 41.2066C61.2093 41.2 59.7679 41.2 58.3266 41.2C56.8853 41.2 55.444 41.2 54.0029 41.1933C54.0029 40.656 54.002 40.1187 54.0012 39.5815C53.9987 37.9701 53.9962 36.359 54.0163 34.7474C54.2431 33.5059 55.5239 32.5583 56.7654 32.6387H62.6638C62.6772 29.4224 62.6772 26.2196 62.6638 23.0033C61.9032 23.0033 61.1427 23.0025 60.3821 23.0017C58.1002 22.9992 55.818 22.9967 53.5357 23.0167Z"
-          fill="black" />
+          fill="black" fill-rule="evenodd"></path>
       </svg>
     </a>
-    <a href="https://www.instagram.com/dceeny/" target="_blank" class="icon-linkas">
-      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd"
+    <a class="icon-linkas" href="https://www.instagram.com/dceeny/" target="_blank">
+      <svg fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path clip-rule="evenodd"
           d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM25 39.3918C25 31.4558 31.4566 25 39.3918 25H60.6082C68.5442 25 75 31.4566 75 39.3918V60.8028C75 68.738 68.5442 75.1946 60.6082 75.1946H39.3918C31.4558 75.1946 25 68.738 25 60.8028V39.3918ZM60.6082 70.4317C65.9174 70.4317 70.2371 66.1121 70.2371 60.8028V39.3918C70.2371 34.0826 65.9174 29.7629 60.6082 29.7629H39.3918C34.0826 29.7629 29.7629 34.0826 29.7629 39.3918V60.8028C29.7629 66.1121 34.0826 70.4317 39.3918 70.4317H60.6082ZM36.9883 50.0054C36.9883 42.8847 42.8438 37.0922 50.0397 37.0922C57.2356 37.0922 63.0911 42.8847 63.0911 50.0054C63.0911 57.1252 57.2356 62.9177 50.0397 62.9177C42.843 62.9177 36.9883 57.1252 36.9883 50.0054ZM41.7422 50.0054C41.7422 54.5033 45.4641 58.1638 50.0397 58.1638C54.6153 58.1638 58.3372 54.5041 58.3372 50.0054C58.3372 45.5066 54.6145 41.8469 50.0397 41.8469C45.4641 41.8469 41.7422 45.5066 41.7422 50.0054ZM63.3248 39.6355C65.0208 39.6355 66.3956 38.2606 66.3956 36.5646C66.3956 34.8687 65.0208 33.4938 63.3248 33.4938C61.6288 33.4938 60.2539 34.8687 60.2539 36.5646C60.2539 38.2606 61.6288 39.6355 63.3248 39.6355Z"
-          fill="black" />
+          fill="black" fill-rule="evenodd"></path>
       </svg>
     </a>
-    <a href="https://www.tiktok.com/@dceeny" target="_blank" class="icon-linkas">
-      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd"
+    <a class="icon-linkas" href="https://www.tiktok.com/@dceeny" target="_blank">
+      <svg fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path clip-rule="evenodd"
           d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM55.4949 25.0138C53.9398 25.0159 52.3819 25.018 50.8188 25.0422L50.8204 25.0438C50.7793 30.4143 50.7819 35.7861 50.7845 41.1646C50.786 44.1708 50.7875 47.1791 50.7813 50.1904C50.7745 51.2001 50.7756 52.2087 50.7766 53.2168C50.7793 55.9293 50.7821 58.638 50.6329 61.3551C50.6112 62.1091 50.2329 62.7719 49.8656 63.4157C49.8363 63.467 49.8071 63.5181 49.7781 63.5692C48.5656 65.5459 46.3358 66.896 44.0091 66.921C40.4995 67.2319 37.2118 64.3583 36.7165 60.9394C36.7128 60.7719 36.7068 60.6033 36.7009 60.434C36.667 59.4697 36.6324 58.4863 36.9993 57.5877C37.5212 56.1063 38.5228 54.7969 39.8417 53.9422C41.648 52.6874 44.0638 52.4999 46.1311 53.1687C46.1311 51.8508 46.1536 50.5334 46.1761 49.2161C46.2063 47.4488 46.2365 45.6817 46.2123 43.9135C41.6871 43.0666 36.854 44.4979 33.4038 47.5028C30.3599 50.0826 28.3989 53.875 28.0238 57.8393C27.9817 58.8565 27.9988 59.8972 28.0488 60.9394C28.4801 65.8147 31.4412 70.3571 35.6493 72.8385C38.1884 74.3354 41.1652 75.148 44.145 74.9777C49.0031 74.8964 53.733 72.2916 56.4582 68.2961C58.152 65.8959 59.113 62.9973 59.2755 60.0847C59.3178 56.0836 59.3152 52.075 59.3125 48.0616C59.3112 45.9936 59.3098 43.9243 59.3146 41.854C60.3974 42.5619 61.5038 43.2541 62.6913 43.7916C65.418 45.0854 68.4369 45.7105 71.4418 45.8089V37.4194C68.2354 37.0616 64.9399 36.0037 62.6101 33.6926C60.2756 31.4378 59.1286 28.1892 58.9646 25C57.8089 25.0107 56.6527 25.0122 55.4949 25.0138Z"
-          fill="black" />
+          fill="black" fill-rule="evenodd"></path>
       </svg>
     </a>
-    <a href="https://wa.link/btnngf" target="_blank" class="icon-linkas">
-      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd"
+    <a class="icon-linkas" href="https://wa.link/btnngf" target="_blank">
+      <svg fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path clip-rule="evenodd"
           d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM69.7626 28.9928C64.6172 23.841 57.7739 21.0027 50.4832 21C35.4616 21 23.2346 33.2252 23.2292 48.2522C23.2274 53.0557 24.4823 57.7446 26.8668 61.8769L23 76L37.4477 72.2105C41.4282 74.3822 45.9107 75.5262 50.4714 75.528H50.4823C65.5029 75.528 77.7299 63.301 77.7363 48.2749C77.7408 40.9915 74.9089 34.1446 69.7626 28.9928ZM50.4841 70.9246H50.475C46.4099 70.9228 42.4231 69.8306 38.9455 67.7671L38.118 67.2761L29.5441 69.525L31.8322 61.1658L31.2938 60.3082C29.0266 56.7015 27.8289 52.5337 27.8308 48.2531C27.8353 35.7633 37.9979 25.6025 50.4923 25.6025C56.5426 25.6043 62.23 27.9642 66.5069 32.2457C70.7839 36.5272 73.1374 42.2183 73.1356 48.2713C73.131 60.7629 62.9693 70.9246 50.4841 70.9246ZM62.9086 53.9588C62.2274 53.6178 58.8799 51.9708 58.2551 51.7435C57.6313 51.5161 57.1766 51.4024 56.7228 52.0845C56.269 52.7666 54.964 54.2998 54.5666 54.7545C54.1692 55.2092 53.7718 55.2656 53.0915 54.9246C52.9802 54.8688 52.8283 54.803 52.6409 54.7217L52.6406 54.7216C51.6816 54.3056 49.7905 53.4855 47.6151 51.5443C45.5907 49.7382 44.2239 47.5084 43.8265 46.8272C43.4291 46.1452 43.7837 45.7769 44.1248 45.4376C44.3292 45.2338 44.564 44.9478 44.7987 44.662C44.9157 44.5194 45.0328 44.3768 45.146 44.2445C45.4345 43.9075 45.56 43.6516 45.7302 43.3049C45.7607 43.2427 45.7926 43.1776 45.8272 43.1087C46.0545 42.654 45.9409 42.2565 45.7708 41.9155C45.6572 41.6877 45.0118 40.1167 44.4265 38.6923C44.1355 37.984 43.8594 37.3119 43.671 36.8592C43.1828 35.687 42.6883 35.69 42.2913 35.6924C42.2386 35.6928 42.1876 35.6931 42.1386 35.6906C41.7421 35.6706 41.2874 35.667 40.8336 35.667C40.3798 35.667 39.6423 35.837 39.0175 36.5191C38.9773 36.5631 38.9323 36.6111 38.8834 36.6633L38.8831 36.6637C38.1735 37.4213 36.634 39.0648 36.634 42.2002C36.634 45.544 39.062 48.7748 39.4124 49.2411L39.415 49.2444C39.4371 49.274 39.4767 49.3309 39.5333 49.4121C40.3462 50.5782 44.6615 56.7691 51.0481 59.5271C52.6732 60.2291 53.9409 60.6475 54.9303 60.9612C56.5618 61.4796 58.046 61.4068 59.22 61.2313C60.5286 61.0358 63.2487 59.5844 63.8161 57.9938C64.3836 56.4033 64.3836 55.0392 64.2136 54.7554C64.0764 54.5258 63.7545 54.3701 63.2776 54.1395L63.2775 54.1394C63.1632 54.0842 63.0401 54.0247 62.9086 53.9588Z"
-          fill="black" />
+          fill="black" fill-rule="evenodd"></path>
       </svg>
     </a>
   </div>
-  <div class="google-map"><iframe
+  <div class="google-map"><iframe allowfullscreen="" height="450" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.4244558287974!2d6.1593514754505625!3d35.54321803754378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f4118319744c81%3A0xf431088c6b7f971!2sRte%20de%20Biskra%2C%20Batna!5e0!3m2!1sen!2sdz!4v1733437188992!5m2!1sen!2sdz"
-      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      style="border:0;" width="600"></iframe></div>
   <footer id="footer"></footer>
-  <script src="script.js"></script>
+
 </body>
 
 </html>

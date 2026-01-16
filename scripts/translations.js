@@ -24,7 +24,33 @@
     en: {
       meta_home_title: "Dceeny | Interior Design Studio",
       meta_home_desc:
-        "Dceeny is an interior design studio and academy. Explore our projects, services, and professional training courses.",
+        "Dceeny is an interior design studio. Explore our projects, services, and design concepts.",
+
+      meta_about_title: "About Dceeny | Interior Design Studio",
+      meta_about_desc:
+        "Learn about Dceeny, our design philosophy, and how we create functional and aesthetic interior spaces.",
+
+      meta_services_title: "Services | Dceeny Interior Design Studio",
+      meta_services_desc:
+        "Discover Dceeny’s interior design services, including concept design, space planning, and project supervision.",
+
+      meta_private_projects_title:
+        "Private Projects | Dceeny Interior Design Studio",
+      meta_private_projects_desc:
+        "Explore Dceeny’s private interior design projects, including residential spaces and custom concepts.",
+
+      meta_public_projects_title:
+        "Public Projects | Dceeny Interior Design Studio",
+      meta_public_projects_desc:
+        "Explore Dceeny’s public and commercial interior design projects, including offices, studios, and shared spaces.",
+
+      meta_contacts_title: "Contact Dceeny | Interior Design Studio",
+      meta_contacts_desc:
+        "Get in touch with Dceeny for interior design inquiries, collaborations, and project discussions.",
+
+      meta_order_title: "Start a Project | Dceeny Interior Design Studio",
+      meta_order_desc:
+        "Submit your interior design project request and let Dceeny bring your vision to life.",
       interioddesign: "Interior Design",
       projects: "Projects",
       privateProjects: "Private projects",
@@ -1482,7 +1508,34 @@
     fr: {
       meta_home_title: "Dceeny | Studio de design d’intérieur",
       meta_home_desc:
-        "Dceeny est un studio et une académie de design d’intérieur. Découvrez nos projets, services et formations professionnelles.",
+        "Dceeny est un studio de design d’intérieur. Découvrez nos projets, services et concepts de design.",
+
+      meta_about_title: "À propos de Dceeny | Studio de design d’intérieur",
+      meta_about_desc:
+        "Découvrez Dceeny, notre approche du design et notre vision des espaces intérieurs fonctionnels et esthétiques.",
+
+      meta_services_title: "Services | Studio de design d’intérieur Dceeny",
+      meta_services_desc:
+        "Découvrez les services de design d’intérieur de Dceeny : conception, aménagement d’espace et suivi de projet.",
+
+      meta_private_projects_title:
+        "Projets privés | Studio de design d’intérieur Dceeny",
+      meta_private_projects_desc:
+        "Explorez les projets privés de Dceeny, incluant des espaces résidentiels et des concepts sur mesure.",
+
+      meta_public_projects_title:
+        "Projets publics | Studio de design d’intérieur Dceeny",
+      meta_public_projects_desc:
+        "Découvrez les projets publics et commerciaux de Dceeny : bureaux, studios et espaces collectifs.",
+
+      meta_contacts_title: "Contact | Studio de design d’intérieur Dceeny",
+      meta_contacts_desc:
+        "Contactez Dceeny pour vos projets de design d’intérieur, collaborations et demandes d’information.",
+
+      meta_order_title:
+        "Démarrer un projet | Studio de design d’intérieur Dceeny",
+      meta_order_desc:
+        "Soumettez votre demande de projet de design d’intérieur et concrétisez votre vision avec Dceeny.",
       interioddesign: "Design d'intérieur",
       projects: "Projets",
       privateProjects: "Projets privés",
@@ -3029,6 +3082,35 @@
     },
 
     ar: {
+      meta_home_title: "دسيني | استوديو التصميم الداخلي",
+      meta_home_desc:
+        "دسيني هو استوديو تصميم داخلي. اكتشف مشاريعنا وخدماتنا وأفكار التصميم.",
+
+      meta_about_title: "من نحن | استوديو التصميم الداخلي دسيني",
+      meta_about_desc:
+        "تعرف على دسيني، فلسفتنا في التصميم، ورؤيتنا في إنشاء مساحات داخلية عملية وجمالية.",
+
+      meta_services_title: "الخدمات | استوديو التصميم الداخلي دسيني",
+      meta_services_desc:
+        "اكتشف خدمات التصميم الداخلي التي يقدمها دسيني، من التصميم المفاهيمي إلى تخطيط المساحات والإشراف.",
+
+      meta_private_projects_title:
+        "المشاريع الخاصة | استوديو التصميم الداخلي دسيني",
+      meta_private_projects_desc:
+        "استعرض مشاريع دسيني الخاصة في التصميم الداخلي، بما في ذلك المساحات السكنية والتصاميم المخصصة.",
+
+      meta_public_projects_title:
+        "المشاريع العامة | استوديو التصميم الداخلي دسيني",
+      meta_public_projects_desc:
+        "اكتشف مشاريع دسيني العامة والتجارية، مثل المكاتب والاستوديوهات والمساحات المشتركة.",
+
+      meta_contacts_title: "اتصل بنا | استوديو التصميم الداخلي دسيني",
+      meta_contacts_desc:
+        "تواصل مع دسيني للاستفسار عن مشاريع التصميم الداخلي أو فرص التعاون.",
+
+      meta_order_title: "ابدأ مشروعك | استوديو التصميم الداخلي دسيني",
+      meta_order_desc:
+        "قدّم طلب مشروع تصميم داخلي ودع دسيني يحوّل رؤيتك إلى واقع.",
       meta_home_title: "دسيني | استوديو التصميم الداخلي",
       meta_home_desc:
         "دسيني استوديو وأكاديمية للتصميم الداخلي. اكتشف مشاريعنا وخدماتنا والدورات التدريبية الاحترافية.",
