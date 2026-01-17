@@ -4585,3 +4585,19 @@ body {
     scroll-behavior: auto !important;
   }
 }
+/* ===== Overlay open state + scroll lock (added) ===== */
+.overlay-order.open {
+  display: flex;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+/* ==========================
+   ACADEMY SLIDESHOW STYLES
+   ========================== */
+.academy-slideshow {
+  position: relative;
+  width: 100%;
+  height: 850px;
+  overflow: hidden;
+} 

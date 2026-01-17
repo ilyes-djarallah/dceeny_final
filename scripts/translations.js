@@ -23,6 +23,65 @@
   const translations = {
     en: {
       meta_bedroom_batna13_title:
+        "Private Bedroom — Batna | Dceeny Interior Design Studio",
+      meta_bedroom_batna13_desc:
+        "Minimalist bedroom interior design render in Batna, Algeria. 3D visualization created in 3ds Max with Corona/V-Ray workflow.",
+
+      meta_bedroom_skikda03_title:
+        "Private Bedroom — Skikda | Dceeny Interior Design Studio",
+      meta_bedroom_skikda03_desc:
+        "Modern minimalist bedroom concept. Photoreal 3D interior rendering with 3ds Max and Corona/V-Ray workflow.",
+
+      meta_kitchen_annaba55_title:
+        "Kitchen Design — Annaba | Dceeny Interior Design Studio",
+      meta_kitchen_annaba55_desc:
+        "Minimalist kitchen interior concept. High-end 3D kitchen visualization using 3ds Max with Corona/V-Ray style rendering.",
+
+      meta_kitchen_baku17_title:
+        "Kitchen Design — Baku | Dceeny Interior Design Studio",
+      meta_kitchen_baku17_desc:
+        "Contemporary kitchen design concept. Photoreal 3D rendering in 3ds Max with Corona/V-Ray workflow.",
+
+      meta_livingroom_bali2_title:
+        "Living Room Design — Bali | Dceeny Interior Design Studio",
+      meta_livingroom_bali2_desc:
+        "Warm minimalist living room interior concept. 3D visualization created with 3ds Max and Corona/V-Ray workflow.",
+
+      meta_livingroom_kuala12_title:
+        "Living Room Design — Kuala Lumpur | Dceeny Interior Design Studio",
+      meta_livingroom_kuala12_desc:
+        "Modern living room interior design concept. Photoreal CGI rendering with 3ds Max and Corona/V-Ray workflow.",
+
+      meta_gym_doha16_title:
+        "Gym Interior Design — Doha | Dceeny Interior Design Studio",
+      meta_gym_doha16_desc:
+        "Premium gym interior concept with modern lighting and materials. 3D visualization in 3ds Max with Corona/V-Ray workflow.",
+
+      meta_office_riyadh07_title:
+        "Office Interior Design — Riyadh | Dceeny Interior Design Studio",
+      meta_office_riyadh07_desc:
+        "Minimal office interior concept for productivity and comfort. Photoreal 3D rendering using 3ds Max and Corona/V-Ray workflow.",
+
+      meta_sauna_oran02_title:
+        "Sauna & Spa Interior — Oran | Dceeny Interior Design Studio",
+      meta_sauna_oran02_desc:
+        "Luxury sauna/spa interior concept with warm materials. 3D visualization in 3ds Max with Corona/V-Ray workflow.",
+
+      meta_stand_hanoi25_title:
+        "Exhibition Stand Design — Hanoi | Dceeny Interior Design Studio",
+      meta_stand_hanoi25_desc:
+        "Minimal exhibition stand concept for events and branding. 3D visualization created in 3ds Max with Corona/V-Ray workflow.",
+
+      meta_coffee_shop_batna34_title:
+        "Coffee Shop Design — Batna | Dceeny Interior Design Studio",
+      meta_coffee_shop_batna34_desc:
+        "Modern minimalist coffee shop interior concept in Batna. Photoreal 3D rendering in 3ds Max with Corona/V-Ray workflow.",
+
+      meta_pilates_studio_algiers14_title:
+        "Pilates Studio Design — Algiers | Dceeny Interior Design Studio",
+      meta_pilates_studio_algiers14_desc:
+        "Minimal pilates studio interior concept with calm lighting. 3D visualization in 3ds Max using Corona/V-Ray workflow.",
+      meta_bedroom_batna13_title:
         "Private Apartment Bedroom — Batna | Dceeny Interior Design Studio",
       meta_bedroom_batna13_desc:
         "Minimalist bedroom interior design concept in Batna, Algeria. 3D visualization rendered in 3ds Max with Corona style workflow.",
@@ -1510,6 +1569,65 @@
     },
 
     fr: {
+      meta_bedroom_batna13_title:
+        "Chambre privée — Batna | Dceeny Studio de design d’intérieur",
+      meta_bedroom_batna13_desc:
+        "Chambre minimaliste à Batna, Algérie. Visualisation 3D réalisée avec 3ds Max (workflow Corona/V-Ray).",
+
+      meta_bedroom_skikda03_title:
+        "Chambre privée — Skikda | Dceeny Studio de design d’intérieur",
+      meta_bedroom_skikda03_desc:
+        "Concept de chambre moderne et minimaliste. Rendu 3D photoréaliste avec 3ds Max (workflow Corona/V-Ray).",
+
+      meta_kitchen_annaba55_title:
+        "Cuisine — Annaba | Dceeny Studio de design d’intérieur",
+      meta_kitchen_annaba55_desc:
+        "Concept de cuisine minimaliste. Visualisation 3D haut de gamme avec 3ds Max (workflow Corona/V-Ray).",
+
+      meta_kitchen_baku17_title:
+        "Cuisine — Bakou | Dceeny Studio de design d’intérieur",
+      meta_kitchen_baku17_desc:
+        "Concept de cuisine contemporaine. Rendu 3D photoréaliste avec 3ds Max (workflow Corona/V-Ray).",
+
+      meta_livingroom_bali2_title:
+        "Salon — Bali | Dceeny Studio de design d’intérieur",
+      meta_livingroom_bali2_desc:
+        "Concept de salon minimaliste et chaleureux. Visualisation 3D avec 3ds Max (workflow Corona/V-Ray).",
+
+      meta_livingroom_kuala12_title:
+        "Salon — Kuala Lumpur | Dceeny Studio de design d’intérieur",
+      meta_livingroom_kuala12_desc:
+        "Concept de salon moderne. Rendu CGI photoréaliste avec 3ds Max (workflow Corona/V-Ray).",
+
+      meta_gym_doha16_title:
+        "Salle de sport — Doha | Dceeny Studio de design d’intérieur",
+      meta_gym_doha16_desc:
+        "Concept de salle de sport premium avec éclairage moderne. Visualisation 3D avec 3ds Max (workflow Corona/V-Ray).",
+
+      meta_office_riyadh07_title:
+        "Bureau — Riyad | Dceeny Studio de design d’intérieur",
+      meta_office_riyadh07_desc:
+        "Concept de bureau minimaliste pour confort et productivité. Rendu 3D avec 3ds Max (workflow Corona/V-Ray).",
+
+      meta_sauna_oran02_title:
+        "Sauna & Spa — Oran | Dceeny Studio de design d’intérieur",
+      meta_sauna_oran02_desc:
+        "Concept de sauna/spa luxueux avec matériaux chaleureux. Visualisation 3D avec 3ds Max (workflow Corona/V-Ray).",
+
+      meta_stand_hanoi25_title:
+        "Stand d’exposition — Hanoï | Dceeny Studio de design d’intérieur",
+      meta_stand_hanoi25_desc:
+        "Concept de stand minimaliste pour événements et branding. Visualisation 3D avec 3ds Max (workflow Corona/V-Ray).",
+
+      meta_coffee_shop_batna34_title:
+        "Coffee shop — Batna | Dceeny Studio de design d’intérieur",
+      meta_coffee_shop_batna34_desc:
+        "Concept de coffee shop moderne et minimaliste à Batna. Rendu 3D photoréaliste avec 3ds Max (workflow Corona/V-Ray).",
+
+      meta_pilates_studio_algiers14_title:
+        "Studio de Pilates — Alger | Dceeny Studio de design d’intérieur",
+      meta_pilates_studio_algiers14_desc:
+        "Concept de studio de pilates minimaliste avec lumière apaisante. Visualisation 3D avec 3ds Max (workflow Corona/V-Ray).",
       meta_bedroom_batna13_title:
         "Chambre a Coucher privé — Batna | Dceeny Studio de design d’intérieur",
       meta_bedroom_batna13_desc:
@@ -3090,7 +3208,66 @@
     },
 
     ar: {
-            meta_bedroom_batna13_title:
+      meta_bedroom_batna13_title:
+        "غرفة نوم خاصة — باتنة | دسيني استوديو التصميم الداخلي",
+      meta_bedroom_batna13_desc:
+        "تصميم غرفة نوم مينيمال في باتنة، الجزائر. تصور ثلاثي الأبعاد باستخدام 3ds Max ضمن سير عمل Corona/V-Ray.",
+
+      meta_bedroom_skikda03_title:
+        "غرفة نوم خاصة — سكيكدة | دسيني استوديو التصميم الداخلي",
+      meta_bedroom_skikda03_desc:
+        "تصميم غرفة نوم حديثة بأسلوب مينيمال. رندر داخلي واقعي باستخدام 3ds Max ضمن سير عمل Corona/V-Ray.",
+
+      meta_kitchen_annaba55_title:
+        "تصميم مطبخ — عنابة | دسيني استوديو التصميم الداخلي",
+      meta_kitchen_annaba55_desc:
+        "تصميم مطبخ مينيمال. تصور ثلاثي الأبعاد عالي الجودة باستخدام 3ds Max ضمن سير عمل Corona/V-Ray.",
+
+      meta_kitchen_baku17_title:
+        "تصميم مطبخ — باكو | دسيني استوديو التصميم الداخلي",
+      meta_kitchen_baku17_desc:
+        "تصميم مطبخ معاصر. رندر واقعي باستخدام 3ds Max ضمن سير عمل Corona/V-Ray.",
+
+      meta_livingroom_bali2_title:
+        "تصميم غرفة معيشة — بالي | دسيني استوديو التصميم الداخلي",
+      meta_livingroom_bali2_desc:
+        "تصميم غرفة معيشة دافئة بأسلوب مينيمال. تصور ثلاثي الأبعاد باستخدام 3ds Max ضمن سير عمل Corona/V-Ray.",
+
+      meta_livingroom_kuala12_title:
+        "تصميم غرفة معيشة — كوالالمبور | دسيني استوديو التصميم الداخلي",
+      meta_livingroom_kuala12_desc:
+        "تصميم غرفة معيشة حديثة. رندر CGI واقعي باستخدام 3ds Max ضمن سير عمل Corona/V-Ray.",
+
+      meta_gym_doha16_title:
+        "تصميم نادي رياضي — الدوحة | دسيني استوديو التصميم الداخلي",
+      meta_gym_doha16_desc:
+        "تصميم نادي رياضي فاخر بإضاءة وخامات حديثة. تصور ثلاثي الأبعاد باستخدام 3ds Max ضمن سير عمل Corona/V-Ray.",
+
+      meta_office_riyadh07_title:
+        "تصميم مكتب — الرياض | دسيني استوديو التصميم الداخلي",
+      meta_office_riyadh07_desc:
+        "تصميم مكتب مينيمال للراحة والإنتاجية. رندر واقعي باستخدام 3ds Max ضمن سير عمل Corona/V-Ray.",
+
+      meta_sauna_oran02_title:
+        "تصميم ساونا وسبا — وهران | دسيني استوديو التصميم الداخلي",
+      meta_sauna_oran02_desc:
+        "تصميم ساونا/سبا فاخر بخامات دافئة. تصور ثلاثي الأبعاد باستخدام 3ds Max ضمن سير عمل Corona/V-Ray.",
+
+      meta_stand_hanoi25_title:
+        "تصميم جناح معرض — هانوي | دسيني استوديو التصميم الداخلي",
+      meta_stand_hanoi25_desc:
+        "تصميم جناح معرض مينيمال للفعاليات والهوية البصرية. تصور ثلاثي الأبعاد باستخدام 3ds Max ضمن سير عمل Corona/V-Ray.",
+
+      meta_coffee_shop_batna34_title:
+        "تصميم مقهى — باتنة | دسيني استوديو التصميم الداخلي",
+      meta_coffee_shop_batna34_desc:
+        "تصميم مقهى حديث بأسلوب مينيمال في باتنة. رندر واقعي باستخدام 3ds Max ضمن سير عمل Corona/V-Ray.",
+
+      meta_pilates_studio_algiers14_title:
+        "تصميم استوديو بيلاتس — الجزائر العاصمة | دسيني استوديو التصميم الداخلي",
+      meta_pilates_studio_algiers14_desc:
+        "تصميم استوديو بيلاتس مينيمال بإضاءة هادئة. تصور ثلاثي الأبعاد باستخدام 3ds Max ضمن سير عمل Corona/V-Ray.",
+      meta_bedroom_batna13_title:
         "غرفة نوم شقة خاصة — باتنة | دسيني استوديو التصميم الداخلي",
       meta_bedroom_batna13_desc:
         "تصميم غرفة نوم بأسلوب مينيمال في باتنة، الجزائر. تصور ثلاثي الأبعاد باستخدام 3ds Max ضمن سير عمل Corona.",

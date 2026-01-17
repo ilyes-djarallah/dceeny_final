@@ -1,54 +1,69 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dceeny</title>
-
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title data-translate="meta_livingroom_kuala12_title">Dceeny</title>
   <!-- External Libraries -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <link href="style.css" rel="stylesheet" />
   <!-- Fancybox CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
-
+  <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" rel="stylesheet" />
   <!-- Fancybox JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 
   <!-- Translation Script -->
   <script src="../scripts/translations.js"></script>
-  <!-- <link rel="icon" href="assets/images/favicon.png" /> -->
+  <link rel="icon" href="assets/images/favicon.png" />
   <!-- Main ICO Favicon (for Google & legacy browsers) -->
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
+  <link href="/favicon.ico" rel="icon" type="image/x-icon" />
   <!-- Modern PNG Favicons (32x32 & 16x16) -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
-
+  <link href="/assets/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+  <link href="/assets/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
   <!-- Apple Touch Icon (for Safari/iOS) -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
-
+  <link href="/assets/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
   <!-- Optional: Web App Manifest (for Android) -->
-  <link rel="manifest" href="/site.webmanifest">
+  <link href="/site.webmanifest" rel="manifest" />
+  <link href="/style.css" rel="stylesheet" />
+  <script defer="" src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+  <script defer="" src="/scripts/translations.js"></script>
+  <script defer="" src="/layout.js"></script>
+  <script defer="" src="/script.js"></script>
+  <meta content="Dceeny" data-translate="meta_livingroom_kuala12_title" name="title" />
 
+  <meta content="Dceeny interior design studio portfolio project." data-translate="meta_livingroom_kuala12_desc"
+    name="description" />
+  <meta
+    content="interior design studio, architectural visualization, 3ds Max, Corona Renderer, V-Ray, CGI interior, photorealistic render, living room design, modern living room, minimalist interior, sofa layout, lighting"
+    name="keywords" />
+  <link href="https://dceeny.com/livingroom-kuala12" rel="canonical" />
+  <meta content="index,follow" name="robots" />
+  <meta content="website" property="og:type" />
+  <meta content="Dceeny" property="og:site_name" />
+  <meta content="Dceeny" data-translate="meta_livingroom_kuala12_title" property="og:title" />
+  <meta content="Dceeny interior design studio." data-translate="meta_livingroom_kuala12_desc"
+    property="og:description" />
+  <meta content="https://dceeny.com/livingroom-kuala12" property="og:url" />
+  <meta content="https://dceeny.com/assets/images/og-cover.jpg" property="og:image" />
+  <meta content="summary_large_image" name="twitter:card" />
+  <meta content="Dceeny" data-translate="meta_livingroom_kuala12_title" name="twitter:title" />
+  <meta content="Dceeny interior design studio." data-translate="meta_livingroom_kuala12_desc"
+    name="twitter:description" />
+  <meta content="https://dceeny.com/assets/images/og-cover.jpg" name="twitter:image" />
+  <link href="https://dceeny.com/livingroom-kuala12" hreflang="en" rel="alternate" />
+  <link href="https://dceeny.com/livingroom-kuala12?lang=fr" hreflang="fr" rel="alternate" />
+  <link href="https://dceeny.com/livingroom-kuala12?lang=ar" hreflang="ar" rel="alternate" />
+  <link href="https://dceeny.com/livingroom-kuala12" hreflang="x-default" rel="alternate" />
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700&amp;display=swap"
+    onload="this.onload=null;this.rel='stylesheet'" rel="preload" /><noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet" />
+  </noscript>
 </head>
-<script>
-  $(document).ready(function () {
-    $("#header-container").load("elements/header.html", function () {
-      const savedLanguage = localStorage.getItem("preferredLanguage") || "en";
-      applyTranslations(savedLanguage); // Call translation function after loading
-    });
-  });
-</script>
-<script>
-  $(function () {
-    $("#footer").load("elements/footer.html", function () {
-      applyTranslations(localStorage.getItem("preferredLanguage") || "en");
-    });
-  });
-</script>
+
 
 <body>
   <!-- <div id="loading-screen">
@@ -56,14 +71,14 @@
     <p>Loading, please wait...</p>
   </div> -->
   <!-- Scroll-to-top Button -->
-  <button id="scrollToTop" class="scroll-to-top">
-    <svg role="presentation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-      y="0px" width="50px" height="50px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-      <path style="fill:#000000;" d="M47.875,24c0,13.186-10.689,23.875-23.875,23.875S0.125,37.186,0.125,24S10.814,0.125,24,0.125
+  <button class="scroll-to-top" id="scrollToTop">
+    <svg enable-background="new 0 0 48 48" height="50px" role="presentation" viewbox="0 0 48 48" width="50px" x="0px"
+      xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+      <path d="M47.875,24c0,13.186-10.689,23.875-23.875,23.875S0.125,37.186,0.125,24S10.814,0.125,24,0.125
         S47.875,10.814,47.875,24z M25.503,16.881l6.994,7.049c0.583,0.588,1.532,0.592,2.121,0.008c0.588-0.583,0.592-1.533,0.008-2.122
         l-9.562-9.637c-0.281-0.283-0.664-0.443-1.063-0.443c0,0,0,0-0.001,0c-0.399,0-0.782,0.159-1.063,0.442l-9.591,9.637
         c-0.584,0.587-0.583,1.537,0.005,2.121c0.292,0.292,0.675,0.437,1.058,0.437c0.385,0,0.77-0.147,1.063-0.442L22.5,16.87v19.163
-        c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5L25.503,16.881z"></path>
+        c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5L25.503,16.881z" style="fill:#000000;"></path>
     </svg>
   </button>
   <header id="header-container"></header>
@@ -75,95 +90,103 @@
   <!-- Gallery Section -->
   <div class="gallery-shit">
     <div class="gallery-row-shit">
-      <a href="assets/images/projects/private/Jakarta/cam 001.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Jakarta/cam 001.webp" alt="Image" />
+      <a data-fancybox="gallery" href="/assets/images/projects/private/Jakarta/cam%20001.webp">
+        <img alt="Livingroom Kuala12 interior design render — view 1 (3ds Max, Corona/V-Ray)" decoding="async"
+          loading="lazy" src="/assets/images/projects/private/Jakarta/cam%20001.webp" />
       </a>
-      <a href="assets/images/projects/private/Jakarta/cam 002.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Jakarta/cam 002.webp" alt="Image" />
-      </a>
-    </div>
-    <div class="gallery-row-shit">
-      <a href="assets/images/projects/private/Jakarta/cam 003.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Jakarta/cam 003.webp" alt="Image" />
-      </a>
-      <a href="assets/images/projects/private/Jakarta/cam 004.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Jakarta/cam 004.webp" alt="Image" />
+      <a data-fancybox="gallery" href="/assets/images/projects/private/Jakarta/cam%20002.webp">
+        <img alt="Livingroom Kuala12 interior design render — view 2 (3ds Max, Corona/V-Ray)" decoding="async"
+          loading="lazy" src="/assets/images/projects/private/Jakarta/cam%20002.webp" />
       </a>
     </div>
     <div class="gallery-row-shit">
-      <a href="assets/images/projects/private/Jakarta/cam 005.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Jakarta/cam 005.webp" alt="Image" />
+      <a data-fancybox="gallery" href="/assets/images/projects/private/Jakarta/cam%20003.webp">
+        <img alt="Livingroom Kuala12 interior design render — view 3 (3ds Max, Corona/V-Ray)" decoding="async"
+          loading="lazy" src="/assets/images/projects/private/Jakarta/cam%20003.webp" />
       </a>
-      <a href="assets/images/projects/private/Jakarta/cam 006.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Jakarta/cam 006.webp" alt="Image" />
-      </a>
-    </div>
-    <div class="gallery-row-shit">
-      <a href="assets/images/projects/private/Jakarta/cam 007.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Jakarta/cam 007.webp" alt="Image" />
-      </a>
-      <a href="assets/images/projects/private/Jakarta/cam 008.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Jakarta/cam 008.webp" alt="Image" />
+      <a data-fancybox="gallery" href="/assets/images/projects/private/Jakarta/cam%20004.webp">
+        <img alt="Livingroom Kuala12 interior design render — view 4 (3ds Max, Corona/V-Ray)" decoding="async"
+          loading="lazy" src="/assets/images/projects/private/Jakarta/cam%20004.webp" />
       </a>
     </div>
     <div class="gallery-row-shit">
-      <a href="assets/images/projects/private/Jakarta/cam 009.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Jakarta/cam 009.webp" alt="Image" />
+      <a data-fancybox="gallery" href="/assets/images/projects/private/Jakarta/cam%20005.webp">
+        <img alt="Livingroom Kuala12 interior design render — view 5 (3ds Max, Corona/V-Ray)" decoding="async"
+          loading="lazy" src="/assets/images/projects/private/Jakarta/cam%20005.webp" />
       </a>
-<a href="assets/images/projects/private/Jakarta/cam 010.webp" data-fancybox="gallery">
-        <img src="assets/images/projects/private/Jakarta/cam 010.webp" alt="Image" />
+      <a data-fancybox="gallery" href="/assets/images/projects/private/Jakarta/cam%20006.webp">
+        <img alt="Livingroom Kuala12 interior design render — view 6 (3ds Max, Corona/V-Ray)" decoding="async"
+          loading="lazy" src="/assets/images/projects/private/Jakarta/cam%20006.webp" />
+      </a>
+    </div>
+    <div class="gallery-row-shit">
+      <a data-fancybox="gallery" href="/assets/images/projects/private/Jakarta/cam%20007.webp">
+        <img alt="Livingroom Kuala12 interior design render — view 7 (3ds Max, Corona/V-Ray)" decoding="async"
+          loading="lazy" src="/assets/images/projects/private/Jakarta/cam%20007.webp" />
+      </a>
+      <a data-fancybox="gallery" href="/assets/images/projects/private/Jakarta/cam%20008.webp">
+        <img alt="Livingroom Kuala12 interior design render — view 8 (3ds Max, Corona/V-Ray)" decoding="async"
+          loading="lazy" src="/assets/images/projects/private/Jakarta/cam%20008.webp" />
+      </a>
+    </div>
+    <div class="gallery-row-shit">
+      <a data-fancybox="gallery" href="/assets/images/projects/private/Jakarta/cam%20009.webp">
+        <img alt="Livingroom Kuala12 interior design render — view 9 (3ds Max, Corona/V-Ray)" decoding="async"
+          loading="lazy" src="/assets/images/projects/private/Jakarta/cam%20009.webp" />
+      </a>
+      <a data-fancybox="gallery" href="/assets/images/projects/private/Jakarta/cam%20010.webp">
+        <img alt="Livingroom Kuala12 interior design render — view 10 (3ds Max, Corona/V-Ray)" decoding="async"
+          loading="lazy" src="/assets/images/projects/private/Jakarta/cam%20010.webp" />
       </a>
     </div>
   </div>
   <div class="grayed-Container-second">
     <div class="do-you-want-row">
       <p data-translate="doYouWant"></p>
-      <button class="order-buttons" id="projects" data-translate="orderProjectDesign"></button>
+      <button class="order-buttons" data-translate="orderProjectDesign" id="projects"></button>
       <div class="overlay-order" id="orderOverlay">
         <div class="form-wrapper">
           <!-- Your form remains unchanged -->
           <form id="orderForm">
             <div class="input-group">
-              <label for="fullName" class="input-label">
+              <label class="input-label" for="fullName">
                 <span data-translate="fName">Full Name</span>
                 <span class="required">*</span>
               </label>
-              <input type="text" id="fullName" name="fullName" placeholder="Enter your full name"
-                data-placeholder="enterFName" required />
+              <input data-placeholder="enterFName" id="fullName" name="fullName" placeholder="Enter your full name"
+                required="" type="text" />
               <span class="error-message" data-translate="fNameReq">Full name is required.</span>
             </div>
             <div class="input-group">
-              <label for="phoneNumber" class="input-label">
+              <label class="input-label" for="phoneNumber">
                 <span data-translate="phoneNum">Phone Number</span>
                 <span class="required">*</span>
               </label>
-              <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number"
-                data-placeholder="enterphoneNum" required />
+              <input data-placeholder="enterphoneNum" id="phoneNumber" name="phoneNumber"
+                placeholder="Enter your phone number" required="" type="tel" />
               <span class="error-message" data-translate="phoneNumReq">Phone number is required.</span>
             </div>
-
             <div class="input-group">
-              <label for="city" class="input-label">
+              <label class="input-label" for="city">
                 <span data-translate="city">City</span>
                 <span class="required">*</span>
               </label>
-              <input type="text" id="city" name="city" placeholder="Enter your city" data-placeholder="enterCity"
-                required />
+              <input data-placeholder="enterCity" id="city" name="city" placeholder="Enter your city" required=""
+                type="text" />
               <span class="error-message" data-translate="cityReq">City is required.</span>
             </div>
-
             <div class="input-group">
-              <label for="surface" class="input-label">
+              <label class="input-label" for="surface">
                 <span data-translate="surface">Surface</span>
               </label>
-              <input type="text" id="surface" name="surface" placeholder="Enter the surface (optional)"
-                data-placeholder="enterSurface" />
+              <input data-placeholder="enterSurface" id="surface" name="surface"
+                placeholder="Enter the surface (optional)" type="text" />
             </div>
             <!-- Additional form fields -->
-            <button type="button" class="close-button" id="closeOverlay">
+            <button class="close-button" id="closeOverlay" type="button">
               Close
             </button>
-            <button type="submit" class="submit-button" data-translate="submit">
+            <button class="submit-button" data-translate="submit" type="submit">
               Submit Form
             </button>
           </form>
@@ -176,11 +199,15 @@
     </div>
   </div>
   <footer id="footer"></footer>
-  <script src="script.js"></script>
-  <script>
-    Fancybox.bind('[data-fancybox="gallery"]', {
-      Thumbs: false, // Disable thumbnails
-      Toolbar: true, // Disable toolbar if not needed
+
+
+  <script>window.addEventListener('DOMContentLoaded', () => {
+      if (window.Fancybox) {
+        Fancybox.bind('[data-fancybox="gallery"]', {
+          Thumbs: false,
+          Toolbar: true
+        });
+      }
     });
   </script>
 </body>

@@ -7,10 +7,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title data-translate="meta_bedroom_batna13_title">Dceeny</title>
   <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" rel="stylesheet" />
-  <!-- Fancybox JS -->
-  <script defer="" src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-  <!-- Translation Script -->
-  <link rel="icon" href="/assets/images/favicon.png" />
+  <link rel="icon" href="assets/images/favicon.png" />
+  <!-- Main ICO Favicon (for Google & legacy browsers) -->
   <link href="/favicon.ico" rel="icon" type="image/x-icon" />
   <!-- Modern PNG Favicons (32x32 & 16x16) -->
   <link href="/assets/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
@@ -24,26 +22,24 @@
   <script defer="" src="/layout.js"></script>
   <script defer="" src="/script.js"></script>
   </link>
-  <meta content="Minimalist bedroom interior design render in Batna. 3ds Max visualization with Corona/V-Ray workflow."
-    data-translate="meta_bedroom_batna13_desc" name="description" />
+  <script defer="" src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+  <meta content="Dceeny interior design studio portfolio project." data-translate="meta_bedroom_batna13_desc"
+    name="description" />
   <meta
-    content="interior design studio, bedroom design, minimalist bedroom, 3ds Max render, Corona Renderer, V-Ray, architectural visualization, CGI interior, Batna, Algeria, modern bedroom, lighting design, photorealistic render"
+    content="interior design studio, architectural visualization, 3ds Max, Corona Renderer, V-Ray, CGI interior, photorealistic render, bedroom design, minimalist bedroom, modern bedroom, Batna, Algeria"
     name="keywords" />
   <link href="https://dceeny.com/bedroom-batna13" rel="canonical" />
   <meta content="index,follow" name="robots" />
   <meta content="website" property="og:type" />
   <meta content="Dceeny" property="og:site_name" />
-  <meta content="Private Bedroom — Batna | Dceeny Interior Design Studio" data-translate="meta_bedroom_batna13_title"
-    property="og:title" />
-  <meta content="Minimalist bedroom interior design render in Batna. 3ds Max visualization with Corona/V-Ray workflow."
-    data-translate="meta_bedroom_batna13_desc" property="og:description" />
+  <meta content="Dceeny" data-translate="meta_bedroom_batna13_title" property="og:title" />
+  <meta content="Dceeny interior design studio." data-translate="meta_bedroom_batna13_desc" property="og:description" />
   <meta content="https://dceeny.com/bedroom-batna13" property="og:url" />
   <meta content="https://dceeny.com/assets/images/og-cover.jpg" property="og:image" />
   <meta content="summary_large_image" name="twitter:card" />
-  <meta content="Private Bedroom — Batna | Dceeny Interior Design Studio" data-translate="meta_bedroom_batna13_title"
-    name="twitter:title" />
-  <meta content="Minimalist bedroom interior design render in Batna. 3ds Max visualization with Corona/V-Ray workflow."
-    data-translate="meta_bedroom_batna13_desc" name="twitter:description" />
+  <meta content="Dceeny" data-translate="meta_bedroom_batna13_title" name="twitter:title" />
+  <meta content="Dceeny interior design studio." data-translate="meta_bedroom_batna13_desc"
+    name="twitter:description" />
   <meta content="https://dceeny.com/assets/images/og-cover.jpg" name="twitter:image" />
   <link href="https://dceeny.com/bedroom-batna13" hreflang="en" rel="alternate" />
   <link href="https://dceeny.com/bedroom-batna13?lang=fr" hreflang="fr" rel="alternate" />
@@ -132,17 +128,20 @@
     </div>
     <div class="gallery-row-shit">
       <a data-fancybox="gallery" href="/assets/images/projects/private/Tazoult/11.webp">
-        <img alt="Batna minimalist bedroom interior render — view 11 (3ds Max, Corona/V-Ray)" decoding="async"
+        <img alt="Batna minimalist bedroom interior render — view 9 (3ds Max, Corona/V-Ray)" decoding="async"
           loading="lazy" src="/assets/images/projects/private/Tazoult/11.webp" />
       </a>
     </div>
   </div>
+  </div>
+
   <div class="grayed-Container-second">
     <div class="do-you-want-row">
       <p data-translate="doYouWant"></p>
       <button class="order-buttons" data-translate="orderProjectDesign" id="projects"></button>
       <div class="overlay-order" id="orderOverlay">
         <div class="form-wrapper">
+          <!-- Your form remains unchanged -->
           <form id="orderForm">
             <div class="input-group">
               <label class="input-label" for="fullName">
@@ -195,12 +194,12 @@
     </div>
   </div>
   <footer id="footer"></footer>
-  <script defer="">
-    window.addEventListener("DOMContentLoaded", () => {
+
+  <script>window.addEventListener('DOMContentLoaded', () => {
       if (window.Fancybox) {
         Fancybox.bind('[data-fancybox="gallery"]', {
           Thumbs: false,
-          Toolbar: true,
+          Toolbar: true
         });
       }
     });
